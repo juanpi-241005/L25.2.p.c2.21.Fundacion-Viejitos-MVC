@@ -4,6 +4,9 @@ export default class Cl_mFundacion {
         this.acTotalBolivaresPP = 0;
         this.mayorAporte = 0;
         this.mayorNombre = "";
+        //modificado 25.09.2025
+        this.acDonacionesPrevias = 0;
+        this.cntNombre = 0;
     }
 
     procesarDonante(donante){
@@ -15,6 +18,11 @@ export default class Cl_mFundacion {
             this.mayorAporte = donante.totalDolaresPP();
             this.mayorNombre = donante.nombre;
         }
+
+        //modificado 25.09.2025
+        this.acDonacionesPrevias += donante.donacionesPreviasPP();
+
+        this.cntNombre++
     }
 
     totalFinalDolares(){
@@ -27,5 +35,10 @@ export default class Cl_mFundacion {
 
     mayorDonante(){
         return this.mayorNombre;
+    }
+
+    //modificado 25.09.2025
+    promedioDonacionesPrevias(){
+        return this.acDonacionesPrevias / this.cntNombre;
     }
 }

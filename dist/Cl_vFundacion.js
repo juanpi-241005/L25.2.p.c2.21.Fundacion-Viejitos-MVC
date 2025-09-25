@@ -23,18 +23,21 @@ export default class Cl_vFundacion {
         this.mDonante = new Cl_mDonante({
             nombre: this.vDonante.nombre,
             dolares: this.vDonante.dolares,
-            bolivares:this.vDonante.bolivares
+            bolivares: this.vDonante.bolivares,
+            //modificado 25.09.2025
+            donacionesPrevias: this.vDonante.donacionesPrevias,
         });
         return this.mDonante;
     }
 
-    reportarDonante({totalFinalDolares = 0, totalFinalBolivares = 0, mayorDonante = ""}){
+    reportarDonante({totalFinalDolares = 0, totalFinalBolivares = 0, mayorDonante = "", promedioDonacionesPrevias = 0}){
         if(!this.mDonante)
             throw new Error("No hay Donante procesado");
 
         this.salida.innerHTML += `<br><br>
         ${this.mDonante.nombre} aporta $${this.mDonante.totalDolaresPP().toFixed(2)} (Bs.${this.mDonante.totalBolivaresPP()})
         <br><br>En total se recaudaron $${totalFinalDolares.toFixed(2)} (Bs.${totalFinalBolivares})
-        <br>El mejor donador fue ${mayorDonante}`;
-    }
+        <br>El mejor donador fue ${mayorDonante}
+        <br>El promedio de Donaciones Previas de los donantes es ${promedioDonacionesPrevias}`;
+    }   //modificado 25.09.2025
 }
