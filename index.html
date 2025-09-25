@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundacion Viejitos</title>
+  <link rel="stylesheet" href="styles.css" />    
+</head>
+<body>
+    <!-- Formulario de Donante -->
+    <section id="donanteForm">
+        <h3>Datos del Donante</h3>
+        <input type="text" id="donanteForm_inNombre" placeholder="Nombre del Donante"></input>
+        <input type="text" id="donanteForm_inDolares" placeholder="Dolares Donados"></input>
+        <input type="text" id="donanteForm_inBolivares" placeholder="Bolivares Donados"></input>
+        <button id="donanteForm_btProcesar">Agregar Donante</button>
+    </section>
+    <!-- Sección de Reporte -->
+    <section id="mainForm">
+        <h3>Reporte de los Donantes</h3>
+        <div id="mainForm_salida"></div>
+    </section>
+    <script type="module">
+        import Cl_principal from "./dist/principal.js";
+        new Cl_principal()
+    </script>
+</body>
+</html>
