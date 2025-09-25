@@ -35,6 +35,6 @@ export default class Cl_vFundacion {
         this.salida.innerHTML += `<br><br>
         ${this.mDonante.nombre} aporta $${this.mDonante.totalDolaresPP().toFixed(2)} (Bs.${this.mDonante.totalBolivaresPP()})
         <br><br>En total se recaudaron $${totalFinalDolares.toFixed(2)} (Bs.${totalFinalBolivares})
-        <br>El mejor donador fue ${mayorDonante}`
+        <br>El mejor donador fue ${mayorDonante}`;
     }
 }
