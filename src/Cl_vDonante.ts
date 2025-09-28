@@ -5,7 +5,7 @@ export default class Cl_vDonante {
     private inNombre: HTMLInputElement;
     private inDolares: HTMLInputElement;
     private inBolivares: HTMLInputElement;
-    private btProcesar: HTMLElement;
+    public btProcesar: HTMLElement;
 
     constructor(){
         this.inNombre = document.getElementById("donanteForm_inNombre") as HTMLInputElement;
